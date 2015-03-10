@@ -32,8 +32,6 @@ RUN gem update --system
 RUN gem install rubygems-update
 RUN update_rubygems
 
-RUN ln -s /usr/local/bin/ruby /usr/bin/ruby
-
 RUN cd /tmp ; rails new webapp ; cd /tmp/webapp ; bundle install
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
